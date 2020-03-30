@@ -18823,6 +18823,10 @@
                   , H = F.uuid
                   , $ = F.anchorId
                   , z = 2e3;
+                // Test codes
+                console.log("cid: " + W);
+                console.log("uuid: " + H);
+                console.log("anchorId: " + $);
                 e["default"] = {
                     components: {
                         vAnchorInfo: c["default"],
@@ -18918,7 +18922,7 @@
                             /* this.disableThumbup ? this.messageBox(N.i18next.t("pc_grouplive_live_favor_ban_tips"), [N.i18next.t("pc_grouplive_i_know"), ""]) : */
                             (this.favorCountType = "action",
                             // this.favorCount++, this.favorCountCache++
-                            this.favorCountCache = this.favorCountCache + 100)
+                            this.favorCountCache = this.favorCountCache + 300)
                         },
                         viewsCountChanged: function(t) {
                             var e = t.count;
@@ -19316,8 +19320,8 @@
                             // t.favorCountCache > 0 && (dingtalk.grouplive.uploadLikesClick(H, t.favorCountCache), t.favorCountCache = 0)
                             if (t.favorCountCache > 0)
                             {
-                                t.favorCount = t.favorCount + 100;
-                                dingtalk.grouplive.uploadLikesClick(H, 100);
+                                // t.favorCount = t.favorCount + 20;
+                                dingtalk.grouplive.uploadLikesClick(H, 20);
                                 --t.favorCountCache;
                             }
                         }, 1e-2),
