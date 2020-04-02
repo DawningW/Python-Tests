@@ -9147,7 +9147,7 @@
                     filters: {
                         numOmit: function(t) {
                             var e = 1e5;
-                            return parseInt(t) > e ? (t / 1e4).toFixed(1) + "万" : t
+                            return /* parseInt(t) > e ? (t / 1e4).toFixed(1) + "万" :*/ t
                         }
                     }
                 }
