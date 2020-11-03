@@ -37,7 +37,10 @@ print("当前要填写的问卷为: {}".format(url))
 times = int(input("请输入运行次数: "))
 for i in range(times):
     try:
+        #option = webdriver.ChromeOptions()
+        #option.binary_location = r'C:\Program Files (x86)\SogouExplorer\SogouExplorer.exe'
         browser = webdriver.Edge(executable_path = driver_url)
+        #browser = webdriver.Chrome(executable_path = driver_url, options=option)
         browser.get(url)
         print("第 {} 次运行: {}".format(i + 1, browser.title))
         time.sleep(1)
