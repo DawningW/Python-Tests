@@ -8,6 +8,7 @@ from selenium import webdriver
 from selenium.common.exceptions import UnexpectedAlertPresentException
 
 tag = "option-id"
+# tag = "for" # 问卷星
 
 def autoclick(element):
     browser.find_element_by_xpath("//*[@{}='{}']".format(tag, element)).click()
@@ -56,11 +57,15 @@ for i in range(times):
         autoradio(['5f9cdfda92beb51222601c49', '5f9cdfda92beb51222601c4a', '5f9cdfda92beb51222601c4b'])
         autocheck(['5f9cdb6b92beb559da9b62b5', '5f9cdb6b92beb559da9b62b6', '5f9cdb6b92beb559da9b62b7', '5f9cdb6b92beb559da9b62b8', '5f9cdb6b92beb559da9b62b9'], True)
         browser.find_element_by_id("next_button").click()
+        # browser.find_element_by_id("ctlNext").click() # 问卷星
         while True:
             try:
                 time.sleep(0.2)
                 str = browser.find_element_by_id("end_desc").text
                 if "已完成本次问卷" in str: break
+                # 问卷星
+                # str = browser.find_element_by_id("divdsc").text
+                # if "答卷已经提交" in str: break
             except:
                 pass
         # browser.refresh()
