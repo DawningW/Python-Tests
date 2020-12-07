@@ -30,8 +30,7 @@ def autocheck(elements, mustcheck = False):
         autocheck(elements, mustcheck)
     return
 
-# driver_url = r"E:\Program Files (x86)\DevelopTools\Web\WebDrivers\msedgedriver.exe"
-driver_url = r".\msedgedriver.exe"
+driver_url = r"E:\Program Files (x86)\DevelopTools\Web\WebDrivers\msedgedriver.exe"
 url = "https://www.wenjuan.com/s/26F3Mbz/"
 print("欢迎使用鹏哥专属的用于问卷网的自动问卷填写系统")
 print("当前要填写的问卷为: {}".format(url))

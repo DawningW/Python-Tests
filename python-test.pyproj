@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{34651616-6d17-4a10-a686-73091214650a}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>questionnaire.py</StartupFile>
+    <StartupFile>autologindlut.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -20,12 +20,15 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="autologindlut.py" />
     <Compile Include="BaiduMap.py" />
     <Compile Include="HelloPi.py" />
+    <Compile Include="mytestserver.py" />
     <Compile Include="pddquizhelper.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="questionnaire.py" />
+    <Compile Include="turtle.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="mitmproxy\">
