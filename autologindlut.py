@@ -65,25 +65,28 @@ if __name__ == "__main__":
     parser.add_option("--silent", "-s", dest = "silent", default=False, help="will print nothing if had no error")
     options, args = parser.parse_args()
     if len(args) >= 2:
-        if options.type == "0":
-            print("凌水主校区请使用该项目: https://github.com/kevin-y-ma/login-DLUT-LingShui")
-        elif options.type == "1":
-            print("正在检测是否已经登录校园网, 请稍候")
-            result = info_eda()
-            if result is None:
-                print("正在自动登录校园网, 请稍候")
-                result = login_eda(args[0], args[1])
-                if result is not None:
-                    time.sleep(2)
-                    print("用户{}已成功登录!".format(result["username"]))
-                    print("已用时长: {time}\n已用流量: {usage}\n账户余额: {money}\nIP地址: {ip}".format_map(info_eda()))
+        try:
+            if options.type == "0":
+                print("凌水主校区请使用该项目: https://github.com/kevin-y-ma/login-DLUT-LingShui")
+            elif options.type == "1":
+                print("正在检测是否已经登录校园网, 请稍候")
+                result = info_eda()
+                if result is None:
+                    print("正在自动登录校园网, 请稍候")
+                    result = login_eda(args[0], args[1])
+                    if result is not None:
+                        time.sleep(2)
+                        print("用户{}已成功登录!".format(result["username"]))
+                        print("已用时长: {time}\n已用流量: {usage}\n账户余额: {money}\nIP地址: {ip}".format_map(info_eda()))
+                else:
+                    print("您已登录校园网, 无需重复登录")
+                    print("已用时长: {time}\n已用流量: {usage}\n账户余额: {money}\nIP地址: {ip}".format_map(result))
+            elif options.type == "2":
+                print("很抱歉, 我没去过盘锦校区")
             else:
-                print("您已登录校园网, 无需重复登录")
-                print("已用时长: {time}\n已用流量: {usage}\n账户余额: {money}\nIP地址: {ip}".format_map(result))
-        elif options.type == "2":
-            print("很抱歉, 尚不支持盘锦校区")
-        else:
-            print("无效的校园网种类, 请在0/1/2中选择")
+                print("无效的校园网种类, 请在0/1/2中选择")
+        except Exception as e:
+            print("登录过程中发生异常, 详细信息: {}".format(e))
     else:
         parser.print_usage()
     session.close()
