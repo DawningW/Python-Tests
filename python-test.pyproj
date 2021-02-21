@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{34651616-6d17-4a10-a686-73091214650a}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>cossimilarity.py</StartupFile>
+    <StartupFile>cloudmusic_unlock.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -13,6 +13,7 @@
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId>Global|PythonCore|3.7</InterpreterId>
     <IsWindowsApplication>False</IsWindowsApplication>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -22,6 +23,7 @@
   <ItemGroup>
     <Compile Include="autologindlut.py" />
     <Compile Include="BaiduMap.py" />
+    <Compile Include="cloudmusic_unlock.py" />
     <Compile Include="cossimilarity.py" />
     <Compile Include="HelloPi.py" />
     <Compile Include="mytestserver.py" />
