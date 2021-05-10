@@ -3,6 +3,7 @@
 
 import os
 import sys
+import subprocess
 import time
 from datetime import datetime
 import psutil
@@ -28,6 +29,10 @@ def uptime_info():
     uptime = datetime.now() - datetime.fromtimestamp(psutil.boot_time())
     return "Uptime: %s" % (str(uptime).split('.')[0])
 
+def temp_info():
+    temperature = subprocess.getoutput("vcgencmd measure_temp")
+    return temperature[5:-2]
+
 def cpu_info():
     av1, av2, av3 = os.getloadavg()
     return "Load: %.1f %.1f %.1f" % (av1, av2, av3)
@@ -50,6 +55,7 @@ def draw_stats(device):
     # font2 = ImageFont.truetype(font_path, 12)
     with canvas(device) as draw:
         draw.text((0, 0), uptime_info(), fill="white")
+        draw.text((101, 0), temp_info(), fill="white")
         draw.text((0, 12), cpu_info(), fill="white")
         draw.text((0, 24), mem_info(), fill="white")
         draw.text((0, 36), disk_info(), fill="white")
