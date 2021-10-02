@@ -68,7 +68,7 @@ if __name__ == "__main__":
     if len(args) >= 2:
         try:
             if options.type == "0":
-                print("凌水主校区请使用该项目: https://github.com/kevin-y-ma/login-DLUT-LingShui")
+                print("凌水主校区请使用该项目: https://github.com/YuanyeMa/login-DLUT-LingShui")
             elif options.type == "1":
                 print("正在检测是否已经登录校园网, 请稍候")
                 result = info_eda()
