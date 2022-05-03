@@ -15,7 +15,7 @@ def unlock(input, output):
         output.write(byte3.to_bytes(length=1, byteorder='little'))
     return
 
-def main():
+if __name__ == '__main__':
     print("Welcome to use CloudMusic cache unlocker. Made by wc")
     for root, dirs, files in os.walk('.'):
         for name in files:
@@ -28,6 +28,3 @@ def main():
                         unlock(file, result)
             else:
                 print("Skip %s." % fullpath)
-
-if __name__ == '__main__':
-    main()

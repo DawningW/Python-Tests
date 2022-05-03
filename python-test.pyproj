@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{34651616-6d17-4a10-a686-73091214650a}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>cloudmusic_unlock.py</StartupFile>
+    <StartupFile>questionnaire.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -21,20 +21,33 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BaiduMap.py" />
+    <Compile Include="baidumap.py" />
     <Compile Include="cloudmusic_unlock.py" />
     <Compile Include="cossimilarity.py" />
+    <Compile Include="dlut\autologindlut.py" />
     <Compile Include="download.py" />
-    <Compile Include="HelloPi.py" />
+    <Compile Include="hellopi.py" />
+    <Compile Include="manim\sort_scenes.py" />
     <Compile Include="mytestserver.py" />
     <Compile Include="pddquizhelper.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="protobuf_decode.py" />
     <Compile Include="questionnaire.py" />
+    <Compile Include="raspberrypi\netinfo.py" />
+    <Compile Include="raspberrypi\oledtest.py" />
     <Compile Include="turtle.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dlut\" />
+    <Folder Include="manim\" />
+    <Folder Include="raspberrypi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dlut\autologineda.bat" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
