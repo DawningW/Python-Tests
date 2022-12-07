@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{34651616-6d17-4a10-a686-73091214650a}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>crawler_xaesfgp.py</StartupFile>
+    <StartupFile>chinese_convert.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -22,6 +22,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="baidumap.py" />
+    <Compile Include="chatgpt_server.py" />
+    <Compile Include="chinese_convert.py" />
     <Compile Include="cloudmusic_unlock.py" />
     <Compile Include="cossimilarity.py" />
     <Compile Include="crawler_xaesfgp.py" />
@@ -30,6 +32,7 @@
     <Compile Include="hellopi.py" />
     <Compile Include="manim\sort_scenes.py" />
     <Compile Include="mytestserver.py" />
+    <Compile Include="ocr_server.py" />
     <Compile Include="pddquizhelper.py">
       <SubType>Code</SubType>
     </Compile>
