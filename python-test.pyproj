@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{34651616-6d17-4a10-a686-73091214650a}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>chinese_convert.py</StartupFile>
+    <StartupFile>pitchanalyzer.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -21,6 +21,7 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="0or1.py" />
     <Compile Include="baidumap.py" />
     <Compile Include="chatgpt_server.py" />
     <Compile Include="chinese_convert.py" />
@@ -34,6 +35,9 @@
     <Compile Include="mytestserver.py" />
     <Compile Include="ocr_server.py" />
     <Compile Include="pddquizhelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pitchanalyzer.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="protobuf_decode.py" />
