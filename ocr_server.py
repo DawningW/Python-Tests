@@ -26,5 +26,6 @@ def ocr():
     if f.filename == "":
         return OcrResponse(status_code=400).dict()
     image = Image.open(f).convert("RGB")
-    res = P2T(image)
-    return OcrResponse(results=res).dict()
+    outs = P2T.recognize(image)
+    text = '\n'.join([out["text"] for out in outs])
+    return OcrResponse(results={"text": text}).dict()
