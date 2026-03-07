@@ -46,8 +46,12 @@ if __name__ == '__main__':
                 songDetail = get(f'/ugc/song/get?id={track["id"]}')
                 songPublishTime = songDetail['data']['publishTime']
                 song.append(songPublishTime)
-                albumDetail = get(f'/album?id={track["al"]["id"]}')
-                albumPublishTime = albumDetail['album']['publishTime']
+                albumPublishTime = 0
+                if track["al"]["id"] != 0:
+                    albumDetail = get(f'/album?id={track["al"]["id"]}')
+                    albumPublishTime = albumDetail['album']['publishTime']
+                else:
+                    print(f'警告：歌曲 "{track["name"]}" 没有专辑信息') # 例如白马入芦花
                 song.append(albumPublishTime)
                 publicTime = songPublishTime if songPublishTime > 0 else albumPublishTime
                 song.append(publicTime)
